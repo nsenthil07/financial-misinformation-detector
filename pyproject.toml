@@ -1,0 +1,13 @@
+[project]
+name = "fmd"
+version = "1.0.0"
+description = "Financial misinformation & scam detector: tree-based classifiers + LLM/RAG fact-check assistant"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
+filterwarnings = ["ignore::UserWarning", "ignore::DeprecationWarning"]

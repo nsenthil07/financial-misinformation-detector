@@ -1,0 +1,9 @@
+            share_false     n
+source                       
+politifact        0.064   734
+snopes            0.711  2033 
+
+source-only rule  : {'accuracy': 0.765, 'balanced_accuracy': 0.747, 'precision': 0.703, 'recall': 0.98, 'f1': 0.818, 'roc_auc': 0.747, 'pr_auc': 0.699}
+random forest     : {'accuracy': 0.756, 'balanced_accuracy': 0.746, 'precision': 0.728, 'recall': 0.876, 'f1': 0.795, 'roc_auc': 0.821, 'pr_auc': 0.82}
+
+wording alone predicts the fact-checker with 94.9% accuracy -> the shortcut is learnable

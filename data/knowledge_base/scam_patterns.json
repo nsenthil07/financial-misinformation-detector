@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Prize or lottery win",
+    "label": 1,
+    "pattern": "Message says you have won cash, a prize, a gift card or a holiday you never entered for, and asks you to call, text or click to claim it",
+    "examples": ["Congratulations! You have won a $1000 gift card. Text CLAIM to 80082", "You are a winner of our weekly draw, call now to collect your prize"],
+    "advice": "Real prizes never require you to pay a fee or share bank details to claim. Do not reply or call premium numbers.",
+    "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+  },
+  {
+    "name": "Account locked / suspended (bank impersonation)",
+    "label": 1,
+    "pattern": "Message claims to be from your bank or credit union and says your account is locked, suspended or has unauthorized activity, and gives a link to verify or log in",
+    "examples": ["Your account has been suspended due to unusual activity. Verify now at secure-login-help.com", "ALERT: unauthorized charge detected, confirm your card details here"],
+    "advice": "Financial institutions do not ask you to log in through a texted link. Contact them using the number on the back of your card or their official app.",
+    "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+  },
+  {
+    "name": "Guaranteed investment returns",
+    "label": 1,
+    "pattern": "Message or post promises guaranteed, risk-free or very high returns on an investment, often crypto, forex or a trading app, sometimes with celebrity endorsements",
+    "examples": ["Turn $250 into $5000 in a week with our crypto bot, guaranteed", "Elon backs this new coin, invest now before it explodes"],
+    "advice": "Any promise of guaranteed or risk-free profit is a red flag. Legitimate investments carry risk and are disclosed.",
+    "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams"
+  },
+  {
+    "name": "Pay with crypto or gift cards",
+    "label": 1,
+    "pattern": "Someone asks you to pay a fee, fine, tax or 'protect your money' by sending cryptocurrency, gift cards or a wire transfer",
+    "examples": ["To release your refund, buy Google Play cards and send the codes", "Move your savings to this bitcoin wallet to keep them safe"],
+    "advice": "Legitimate businesses and government agencies do not demand payment in crypto or gift cards.",
+    "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams"
+  },
+  {
+    "name": "Fake check / overpayment",
+    "label": 1,
+    "pattern": "You receive a check for more than expected and are asked to deposit it and send back the difference",
+    "examples": ["I accidentally sent too much, please deposit the check and wire me the extra $900"],
+    "advice": "A check can bounce days after funds appear available. You are responsible for the money you send back.",
+    "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+  },
+  {
+    "name": "Urgent pressure and deadlines",
+    "label": 1,
+    "pattern": "Message pressures you to act immediately, today only, or before an account closes or an offer expires",
+    "examples": ["Final notice: respond within 24 hours or your account will be closed", "Offer expires tonight, reply YES now"],
+    "advice": "Urgency is a pressure tactic to stop you from checking. Slow down and verify through an official channel.",
+    "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+  },
+  {
+    "name": "Premium-rate subscription trap",
+    "label": 1,
+    "pattern": "Message asks you to text a short code or call a number that charges per message or per minute, often for ringtones, quizzes or chat services",
+    "examples": ["Text WIN to 87121 to enter, 150p/msg", "Call 09061701461 now, calls cost 1.50/min"],
+    "advice": "Replying can sign you up for recurring charges. Check the cost before texting any short code.",
+    "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+  },
+  {
+    "name": "Loan or debt relief offer",
+    "label": 1,
+    "pattern": "Unsolicited offer of a guaranteed loan, debt forgiveness or credit repair, usually with an upfront fee",
+    "examples": ["You are pre-approved for a $10,000 loan, no credit check, reply to claim", "Wipe out your debt today, just pay a small processing fee"],
+    "advice": "Lenders cannot guarantee approval before checking your application, and upfront fees for debt relief are a warning sign.",
+    "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+  },
+  {
+    "name": "Personal conversation",
+    "label": 0,
+    "pattern": "Casual message between people who know each other about plans, family, food, work or how their day is going",
+    "examples": ["Running late, see you at 7", "Did you get home ok? Call me tomorrow"],
+    "advice": "Ordinary personal messages contain no request for money, credentials or urgent action.",
+    "url": ""
+  },
+  {
+    "name": "Genuine transaction notice",
+    "label": 0,
+    "pattern": "Expected notification that a purchase or payment happened, with no link to log in and no request for personal details",
+    "examples": ["Your payment of $45.00 to City Water was received. No action needed."],
+    "advice": "Legitimate alerts tell you to use the official app or the number on your card if something looks wrong.",
+    "url": ""
+  }
+]

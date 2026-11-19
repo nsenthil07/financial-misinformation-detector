@@ -1,0 +1,33 @@
+# claims: depth-4 decision tree on words + red flags (readable, not the production model)
+# 'word:x' = TF-IDF weight of word x; 'flag:x' = standardised red-flag count (> 0 means above average)
+# class 1 = deceptive, class 0 = legitimate
+# test ROC-AUC of this tree: 0.553
+
+|--- word:scam <= 0.08
+|   |--- word:no <= 0.07
+|   |   |--- word:facebook <= 0.07
+|   |   |   |--- word:obama <= 0.13
+|   |   |   |   |--- class: 0
+|   |   |   |--- word:obama >  0.13
+|   |   |   |   |--- class: 1
+|   |   |--- word:facebook >  0.07
+|   |   |   |--- flag:caps_ratio <= -0.08
+|   |   |   |   |--- class: 1
+|   |   |   |--- flag:caps_ratio >  -0.08
+|   |   |   |   |--- class: 1
+|   |--- word:no >  0.07
+|   |   |--- flag:n_chars <= -0.36
+|   |   |   |--- class: 0
+|   |   |--- flag:n_chars >  -0.36
+|   |   |   |--- word:to <= 0.11
+|   |   |   |   |--- class: 1
+|   |   |   |--- word:to >  0.11
+|   |   |   |   |--- class: 1
+|--- word:scam >  0.08
+|   |--- word:scam <= 0.36
+|   |   |--- word:is <= 0.11
+|   |   |   |--- class: 1
+|   |   |--- word:is >  0.11
+|   |   |   |--- class: 1
+|   |--- word:scam >  0.36
+|   |   |--- class: 1

@@ -1,0 +1,36 @@
+# messages: depth-4 decision tree on words + red flags (readable, not the production model)
+# 'word:x' = TF-IDF weight of word x; 'flag:x' = standardised red-flag count (> 0 means above average)
+# class 1 = deceptive, class 0 = legitimate
+# test ROC-AUC of this tree: 0.974
+
+|--- flag:n_numbers <= 0.43
+|   |--- flag:has_long_number <= 1.38
+|   |   |--- word:uk <= 0.07
+|   |   |   |--- word:mobile <= 0.13
+|   |   |   |   |--- class: 0
+|   |   |   |--- word:mobile >  0.13
+|   |   |   |   |--- class: 1
+|   |   |--- word:uk >  0.07
+|   |   |   |--- class: 1
+|   |--- flag:has_long_number >  1.38
+|   |   |--- flag:n_chars <= 0.27
+|   |   |   |--- class: 1
+|   |   |--- flag:n_chars >  0.27
+|   |   |   |--- class: 1
+|--- flag:n_numbers >  0.43
+|   |--- flag:has_long_number <= 1.38
+|   |   |--- flag:caps_ratio <= -0.21
+|   |   |   |--- flag:n_numbers <= 1.57
+|   |   |   |   |--- class: 0
+|   |   |   |--- flag:n_numbers >  1.57
+|   |   |   |   |--- class: 1
+|   |   |--- flag:caps_ratio >  -0.21
+|   |   |   |--- flag:caps_ratio <= 3.77
+|   |   |   |   |--- class: 1
+|   |   |   |--- flag:caps_ratio >  3.77
+|   |   |   |   |--- class: 0
+|   |--- flag:has_long_number >  1.38
+|   |   |--- flag:caps_ratio <= -0.45
+|   |   |   |--- class: 1
+|   |   |--- flag:caps_ratio >  -0.45
+|   |   |   |--- class: 1
