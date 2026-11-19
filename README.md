@@ -100,7 +100,7 @@ flowchart LR
 ## Quick start
 
 ```bash
-git clone https://github.com/<your-username>/financial-misinformation-detector.git
+git clone https://github.com/nsenthil07/financial-misinformation-detector.git
 cd financial-misinformation-detector
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
